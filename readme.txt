@@ -34,10 +34,10 @@ The plugin also provides the option to add the request form to an existing WordP
 == Installation ==
 
 1. Unzip package contents
-2. Upload "request-callback" directory to the "/wp-content/plugins/" directory
-3. Activate the plugin through the "Plugins" menu in WordPress
-4. Configure the plugin by going to "Settings" > "Request Call Back". Note: the plugin will work with default settings, however it is recommended to configure your email address and "thank you" page.
-5. To add the button, place "<?php do_action('wpcallback_button'); ?>" in your template file where you want the button to appear (e.g. header.php). Note: you need this code if using lightbox mode (default). If "Display mode" is set to use an existing page, adding the button code is optional.
+2. Upload `request-callback` directory to the `/wp-content/plugins/` directory
+3. Activate the plugin through the `Plugins` menu in WordPress
+4. Configure the plugin by going to `Settings > Request Call Back`. Note: the plugin will work with default settings, however it is recommended to configure your email address and `thank you` page.
+5. To add the button, place `<?php do_action('wpcallback_button'); ?>` in your template file where you want the button to appear (e.g. header.php). Note: you need this code if using lightbox mode (default). If `Display mode` is set to use an existing page, adding the button code is optional.
 6. Make any required CSS and style modifications to meet your needs.
 7. Test and enjoy :)
 
@@ -48,8 +48,8 @@ Sending emails is done using WordPress's built in mail function. If emails aren'
 
 If you're still having trouble then you will have to get in contact with your server host.
 
-= I don't want to use the lightbox, how do I add the request form to an existing WordPress page =
-In plugin settings "Settings" > "Request Call Back", scroll down and set "Display mode" to "Display form on an existing page", then select the page you want to attach it to.
+= I don't want to use the lightbox, how do I add the request form to an existing WordPress page? =
+In plugin settings `Settings > Request Call Back`, scroll down and set `Display mode` to `Display form on an existing page`, then select the page you want to attach it to.
 
 == Screenshots ==
 
