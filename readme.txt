@@ -8,7 +8,7 @@ Stable tag: 1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Adds a simple, configurable request call back button to your site. Visitors can provide their name and number a lightbox or embedded request form.
+Adds a simple, configurable request call back button to your site. Visitors can provide their name and number via lightbox or embedded request form.
 
 == Description ==
 
