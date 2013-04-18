@@ -1,0 +1,30 @@
+.callback_options textarea {
+	width: 98% !important;
+	height: 125px;
+	font-family: "Courier";
+	font-size: 12px;
+}
+
+.callback_options #custom_css {
+	display: none;
+}
+
+.callback_options .form-table {
+	margin-bottom: 40px;
+}
+
+.callback_options #link_to_page {
+	display: none;
+}
+
+.callback_options #thankyoupage.not-set strong {
+	color: red;
+}
+
+.callback_options .wpcallback-footer {
+	color: #666666;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	font-style: italic;
+}
