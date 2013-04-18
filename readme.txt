@@ -1,14 +1,14 @@
 === Request Call Back ===
 Contributors: scottsalisbury
 Donate link: 
-Tags: 1.0
+Tags: request call back, request callback, callback button, call back button, callback form, call back form
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Adds a simple, configurable request call back form to WordPress. Visitors can request a call back by providing their name and number via lightbox (or embedded form), which is then sent to the site owner via email.
+Adds a simple, configurable request call back button to your site. Visitors can provide their name and number a lightbox or embedded request form.
 
 == Description ==
 
@@ -53,17 +53,23 @@ In plugin settings "Settings" > "Request Call Back", scroll down and set "Displa
 
 == Screenshots ==
 
-1. Example of what the call back button looks like on a site header: screenshot-button.png 
-2. Screen shot of the lightbox form: screenshot-lightbox-form.png
-3. Screen shot of the embedded form:  screenshot-embedded-form.png
-4. Screen shot of the options page: screenshot-options.png
+1. Example of what the call back button looks like on a site header
+2. Screen shot of the lightbox form
+3. Screen shot of the embedded form
+4. Screen shot of the options page
 
 == Changelog ==
 
-= v1.0 =
+= v1.1 =
 * First public release of this plugin
+
+= v1.2 =
+* Minor fixes
 
 == Upgrade notice ==
 
-= v1.0 =
+= v1.1 =
 * First public release of this plugin
+
+= v1.2 =
+* Minor fixes
