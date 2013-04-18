@@ -8,7 +8,7 @@ Stable tag: 1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Adds a simple, configurable request call back form to WordPress. Visitors can request a call back by providing their name and number via lightbox (or embedded form), which is then sent to the site owner via email.
+Adds a simple, configurable request call back form to WordPress. Visitors can request a call back by providing their name and number via lightbox or embedded form, which is then sent to the site owner via email.
 
 == Description ==
 
