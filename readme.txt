@@ -29,6 +29,7 @@ The plugin also provides the option to add the request form to an existing WordP
 * Enable or disable lightbox/embedded mode
 * Email address to send details
 * Thank you page
+* Optional "`email address"`, "`time to call"` and "`message"` form fields
 
 == Installation ==
 
