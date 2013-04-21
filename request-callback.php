@@ -42,6 +42,28 @@ function wpcallback_register_styles() {
 
 add_action('wp_print_styles', 'wpcallback_register_styles');
 
+function build_time_intervals($start = 0, $end = 24, $interval = 0.25) {
+	$output = array();
+
+	$steps = 60 / ($interval * 60);
+	$total = (24-$interval) * $steps;
+
+	for($i=0;$i<=$total;$i++) {
+		$decimal_time = $i * $interval;
+		$hour = floor($decimal_time);
+		$min = round(60*($decimal_time-$hour));
+
+		$hour = ($hour < 10 ? '0' . $hour : $hour);
+		$min = ($min < 10 ? '0' . $min : $min);
+
+		if($decimal_time >= $start && $decimal_time <= $end) {
+			$output[] = array('time' => $hour . ':' . $min, 'decimal' => $decimal_time);
+		}
+	}
+
+	return $output;
+}
+
 /* Define and handle option defaults */
 function wpcallback_get_option($option) {
 	global $wpcallback_plugin_option;
@@ -52,7 +74,12 @@ function wpcallback_get_option($option) {
 		"email" => get_bloginfo('admin_email'),
 		"colorbox" => "enabled",
 		"lightbox" => "enabled",
-		"classes" => ""
+		"classes" => "",
+		"allowable_from" => 8.5,
+		"allowable_to" => 19.5,
+		"field_email" => "disabled",
+		"field_time" => "disabled",
+		"field_message" => "disabled"
 	);
 
 	if($value = $wpcallback_plugin_option[$option]) {
@@ -166,8 +193,49 @@ function wpcallback_action() {
 				$name = strip_tags(stripslashes($_POST['callback_name']));
 				$telephone = strip_tags(stripslashes($_POST['callback_telephone']));
 
+				$email = null;
+				$time = null;
+				$message = null;
+
+				if(isset($_POST['callback_email'])) {
+					$email = strip_tags(stripslashes($_POST['callback_email']));
+				}
+
+				if(isset($_POST['callback_time'])) {
+					$time = strip_tags(stripslashes($_POST['callback_time']));
+				}
+
+				if(isset($_POST['callback_message'])) {
+					$message = strip_tags(stripslashes($_POST['callback_message']));
+				}
+
+				$extra_fields = null;
+				if($email) {
+					$extra_fields .= "\nEmail address: " . $email;
+				}
+
+				if($time) {
+					if($time != 'anytime') {
+						$decimal_time = $time;
+						$hour = floor($decimal_time);
+						$min = round(60*($decimal_time-$hour));
+						$hour = ($hour < 10 ? '0' . $hour : $hour);
+						$min = ($min < 10 ? '0' . $min : $min);
+						$string_time = $hour . ":" . $min;
+					}
+					else {
+						$string_time = 'Any time';
+					}
+
+					$extra_fields .= "\nWhen to call: " . $string_time;
+				}
+
+				if($message) {
+					$extra_fields .= "\n\nMessage:\n" . $message;
+				}
+
 				$subject = "Call Back Request";
-				$message = "A call back request has been sent with the following details:\n\nName: " . $name . "\nTelephone: " . $telephone . "\n\n\nSent from " . get_site_url() . " via the Request Call Back plugin.";
+				$message = "A call back request has been sent with the following details:\n\nName: " . $name . "\nTelephone: " . $telephone . $extra_fields . "\n\n\nSent from " . get_site_url() . " via the Request Call Back plugin.";
 
 				/* Send email */
 				if(wp_mail($admin_email, $subject, $message)) {

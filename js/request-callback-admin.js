@@ -12,9 +12,9 @@ jQuery(document).ready(function($) {
 	}
 
 	function setLightboxMode() {
-		var selectedStyle = $('input[name=wpcallback_plugin_option\\[lightbox\\]]:checked').val();
+		var selectedMode = $('input[name=wpcallback_plugin_option\\[lightbox\\]]:checked').val();
 
-		if(selectedStyle == 'disabled') {
+		if(selectedMode == 'disabled') {
 			$('#link_to_page').show();
 		}
 		else {
@@ -22,8 +22,20 @@ jQuery(document).ready(function($) {
 		}
 	}
 
+	function setAvailableTimeMode() {
+		var selectedTime = $('input[name=wpcallback_plugin_option\\[field_time\\]]:checked').val();
+
+		if(selectedTime != 'disabled') {
+			$('#available_times').show();
+		}
+		else {
+			$('#available_times').hide();
+		}
+	}
+
 	setStyleMode();
 	setLightboxMode();
+	setAvailableTimeMode();
 
 	$('.callback_options input[name=wpcallback_plugin_option\\[styling\\]]').click(function() {
 		setStyleMode();
@@ -31,6 +43,10 @@ jQuery(document).ready(function($) {
 
 	$('.callback_options input[name=wpcallback_plugin_option\\[lightbox\\]]').click(function() {
 		setLightboxMode();
+	});
+
+	$('.callback_options input[name=wpcallback_plugin_option\\[field_time\\]]').click(function() {
+		setAvailableTimeMode();
 	});
 
 });

@@ -1,10 +1,9 @@
 === Request Call Back ===
 Contributors: scottsalisbury
-Donate link: 
 Tags: request call back, request callback, callback button, call back button, callback form, call back form
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,7 +19,7 @@ There are other plugins available that do a similar task to this, but I wanted t
 
 By default, this plugin displays a call back button that can be added anywhere on the site via a single line of code (e.g. header.php), which when clicked will open the request form in a lightbox. The button label, colour, position is configurable from the plugin settings page. 
 
-The plugin also provides the option to add the request form to an existing WordPress page instead of opening a lightbox, if preferred. This feature is useful if you don't want to use the built-in request button and want want to use your own link instead.
+The plugin also provides the option to add the request form to an existing WordPress page instead of opening a lightbox, if preferred. This feature is useful if you don't want to use the built-in request button and want to use your own link instead.
 
 = Configurable options =
 * Button label
@@ -34,10 +33,10 @@ The plugin also provides the option to add the request form to an existing WordP
 == Installation ==
 
 1. Unzip package contents
-2. Upload `request-callback` directory to the `/wp-content/plugins/` directory
-3. Activate the plugin through the `Plugins` menu in WordPress
-4. Configure the plugin by going to `Settings > Request Call Back`. Note: the plugin will work with default settings, however it is recommended to configure your email address and `thank you` page.
-5. To add the button, place `<?php do_action('wpcallback_button'); ?>` in your template file where you want the button to appear (e.g. header.php). Note: you need this code if using lightbox mode (default). If `Display mode` is set to use an existing page, adding the button code is optional.
+2. Upload "`request-callback`" directory to the "`/wp-content/plugins/`" directory
+3. Activate the plugin through the "`Plugins`" menu in WordPress
+4. Configure the plugin by going to "`Settings > Request Call Back`". Note: the plugin will work with default settings, however it is recommended to configure your email address and "`thank you`" page.
+5. To add the button, place "`<?php do_action('wpcallback_button'); ?>`" in your template file where you want the button to appear (e.g. header.php). Note: you need this code if using lightbox mode (default). If "`Display mode`" is set to use an existing page, adding the button code is optional.
 6. Make any required CSS and style modifications to meet your needs.
 7. Test and enjoy :)
 
@@ -49,7 +48,7 @@ Sending emails is done using WordPress's built in mail function. If emails aren'
 If you're still having trouble then you will have to get in contact with your server host.
 
 = I don't want to use the lightbox, how do I add the request form to an existing WordPress page? =
-In plugin settings `Settings > Request Call Back`, scroll down and set `Display mode` to `Display form on an existing page`, then select the page you want to attach it to.
+In plugin settings "`Settings > Request Call Back`", scroll down and set "`Display mode`" to "`Display form on an existing page`", then select the page you want to attach it to.
 
 == Screenshots ==
 
@@ -66,6 +65,9 @@ In plugin settings `Settings > Request Call Back`, scroll down and set `Display 
 = v1.2 =
 * Minor fixes
 
+= v1.3 =
+* New feature. Three extra form fields can be added to the call back form (email address, time to call and message) via the plugin options.
+
 == Upgrade notice ==
 
 = v1.1 =
@@ -73,3 +75,6 @@ In plugin settings `Settings > Request Call Back`, scroll down and set `Display 
 
 = v1.2 =
 * Minor fixes
+
+= v1.3 =
+* New feature, three extra form fields can be added to the call back form (email address, time to call and message).

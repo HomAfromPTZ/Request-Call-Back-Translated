@@ -10,10 +10,11 @@
 }
 
 .callback_options .form-table {
-	margin-bottom: 40px;
+	margin-bottom: 45px;
 }
 
-.callback_options #link_to_page {
+.callback_options #link_to_page,
+.callback_options #available_times {
 	display: none;
 }
 
@@ -27,4 +28,8 @@
 	margin-bottom: 0;
 	text-align: center;
 	font-style: italic;
+}
+
+.callback_options .configure-form-fields label {
+	margin-right: 60px;
 }

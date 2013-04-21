@@ -6,23 +6,24 @@ jQuery(document).ready(function($) {
 	}
 	jQuery(document).ready(function($) {
 		$('.callback-form-container').submit(function() {
-			var isValid = true;
-			var formInputs = $(this).find('input[type=text]');
+			var formInputs = $(this).find('.validate');
+			var errors = '';
 
 			$(formInputs).each(function() {
-				if($.trim(this.value) == '' && this.name != 'hear_about_us') {
-					isValid = false;
+				if($.trim(this.value) == '') {
+					fieldLabel = $(this).parent().find('span').html();
+					errors += '- ' + fieldLabel + '\n';
 				}
 			});
 
-			if(isValid) {
+			if(errors.length > 0) {
+				alert('The following information is missing:\n\n' + errors);
+				return false;
+			}
+			else {
 				$('.submit-button').val('Please wait...');
 				$('.submit-button').attr('disabled', 'disabled');
 				return true;
-			}
-			else {
-				alert('Please provide both your name and telephone number.');
-				return false;
 			}
 		});
 	});

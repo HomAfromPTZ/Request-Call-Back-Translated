@@ -79,6 +79,7 @@ function wpcallback_admin_options() {
 					<select name="wpcallback_plugin_option[colour]" id="button_colour_select">
 						<option value="default" <?php selected( 'default', $wpcallback_plugin_option['colour']); ?>>Default</option>
 						<option value="blue" <?php selected( 'blue', $wpcallback_plugin_option['colour']); ?>>Blue</option>
+						<option value="navy" <?php selected( 'navy', $wpcallback_plugin_option['colour']); ?>>Navy</option>
 						<option value="red" <?php selected( 'red', $wpcallback_plugin_option['colour']); ?>>Red</option>
 						<option value="orange" <?php selected( 'orange', $wpcallback_plugin_option['colour']); ?>>Orange</option>
 						<option value="green" <?php selected( 'green', $wpcallback_plugin_option['colour']); ?>>Green</option>
@@ -114,8 +115,8 @@ function wpcallback_admin_options() {
 			</tr>
 		</table>
 
-		<h3>Form Options</h3>
-		<p>Options to customise the call back form</p>
+		<h3>General Options</h3>
+		<p>Options to customise overall functionality of the plugin</p>
 
 		<table class="form-table">
 			<tr valign="top">
@@ -133,7 +134,7 @@ function wpcallback_admin_options() {
 				</td>
 			</tr>
 			<tr valign="top" id="link_to_page">
-				<th scope="row"><strong>Select page</strong></th>
+				<th scope="row">&nbsp;</th>
 				<td>
 					<select name="wpcallback_plugin_option[callback_page]">
 						<?php foreach($all_post_types as $type) : ?>
@@ -174,9 +175,91 @@ function wpcallback_admin_options() {
 							</optgroup>
 						<?php endforeach; ?>
 					</select>
-					<p class="description">Where to send the visitor after the request has been sent successfully</p>
+					<p class="description" style="margin-bottom: 0;">Where to send the visitor after the request has been sent successfully</p>
 				</td>
 			</tr>
+		</table>
+
+		<h3>Extra Field Options</h3>
+		<p>Options to add additional form fields to the request form and whether to make them optional or required</p>
+
+		<table class="form-table">
+			<tr valign="top" class="configure-form-fields">
+				<th scope="row"><strong>Email address</strong></th>
+				<td>
+					<label>
+						<input type="radio" <?php if($wpcallback_plugin_option['field_email']) { checked('disabled', $wpcallback_plugin_option['field_email']); } else { echo 'checked="checked"'; }  ?> value="disabled" name="wpcallback_plugin_option[field_email]">
+						<span>Disabled</span>
+					</label>
+
+					<label>
+						<input type="radio" <?php checked('optional', $wpcallback_plugin_option['field_email']); ?> value="optional" name="wpcallback_plugin_option[field_email]">
+						<span>Optional</span>
+					</label>
+
+					<label>
+						<input type="radio" <?php checked('required', $wpcallback_plugin_option['field_email']); ?> value="required" name="wpcallback_plugin_option[field_email]">
+						<span>Required</span>
+					</label>
+				</td>
+			</tr>
+			<tr valign="top" class="configure-form-fields">
+				<th scope="row"><strong>When to call</strong></th>
+				<td>
+					<label>
+						<input class="available_times_disabled" type="radio" <?php if($wpcallback_plugin_option['field_time']) { checked('disabled', $wpcallback_plugin_option['field_time']); } else { echo 'checked="checked"'; }  ?> value="disabled" name="wpcallback_plugin_option[field_time]">
+						<span>Disabled</span>
+					</label>
+
+					<label>
+						<input class="available_times_enabled" type="radio" <?php checked('optional', $wpcallback_plugin_option['field_time']); ?> value="optional" name="wpcallback_plugin_option[field_time]">
+						<span>Optional</span>
+					</label>
+
+					<label>
+						<input class="available_times_enabled" type="radio" <?php checked('required', $wpcallback_plugin_option['field_time']); ?> value="required" name="wpcallback_plugin_option[field_time]">
+						<span>Required</span>
+					</label>
+				</td>
+			</tr>
+			<tr valign="top" class="configure-form-fields" id="available_times">
+				<th scope="row">&nbsp;</th>
+				<td>
+					Allow visitors to select between
+					<select name="wpcallback_plugin_option[allowable_from]">
+						<?php $allowable = build_time_intervals(0, 24, 0.5) ?>
+						<?php foreach($allowable as $item) : ?>
+						<option value="<?php echo $item['decimal']; ?>" <?php if($wpcallback_plugin_option['allowable_from']) { selected($item['decimal'], $wpcallback_plugin_option['allowable_from']); } elseif($item['decimal'] == 8.5) { echo 'selected="selected"'; } ?>><?php echo $item['time']; ?></option>
+						<?php endforeach; ?>
+					</select>
+					<span> and </span>
+					<select name="wpcallback_plugin_option[allowable_to]">
+						<?php foreach($allowable as $item) : ?>
+						<option value="<?php echo $item['decimal']; ?>" <?php if($wpcallback_plugin_option['allowable_to']) { selected($item['decimal'], $wpcallback_plugin_option['allowable_to']); } elseif($item['decimal'] == 19.5) { echo 'selected="selected"'; } ?>><?php echo $item['time']; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</td>
+			</tr>
+			<tr valign="top" class="configure-form-fields">
+				<th scope="row"><strong>Message</strong></th>
+				<td>
+					<label>
+						<input type="radio" <?php if($wpcallback_plugin_option['field_message']) { checked('disabled', $wpcallback_plugin_option['field_message']); } else { echo 'checked="checked"'; }  ?> value="disabled" name="wpcallback_plugin_option[field_message]">
+						<span>Disabled</span>
+					</label>
+
+					<label>
+						<input type="radio" <?php checked('optional', $wpcallback_plugin_option['field_message']); ?> value="optional" name="wpcallback_plugin_option[field_message]">
+						<span>Optional</span>
+					</label>
+
+					<label>
+						<input type="radio" <?php checked('required', $wpcallback_plugin_option['field_message']); ?> value="required" name="wpcallback_plugin_option[field_message]">
+						<span>Required</span>
+					</label>
+				</td>
+			</tr>
+
 		</table>
 
 		<h3>Advanced Options</h3>
@@ -198,7 +281,6 @@ function wpcallback_admin_options() {
 					</label>
 				</td>
 			</tr>
-
 		</table>
 
 		<p class="submit">
