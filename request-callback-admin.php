@@ -149,6 +149,13 @@ function wpcallback_admin_options() {
 				</td>
 			</tr>
 			<tr valign="top">
+				<th scope="row"><strong>Form Width</strong></th>
+				<td>
+					<input type="text" class="input-width regular-text" name="wpcallback_plugin_option[width]" value="<?php echo wpcallback_get_option('width'); ?>" />
+					<p class="description">Supports pixels or percent, for example 400px or 50%</p>
+				</td>
+			</tr>
+			<tr valign="top">
 				<th scope="row"><strong>Form content</strong></th>
 				<td>
 					<textarea name="wpcallback_plugin_option[description]"><?php echo wpcallback_get_description(); ?></textarea>
@@ -185,7 +192,7 @@ function wpcallback_admin_options() {
 
 		<table class="form-table">
 			<tr valign="top" class="configure-form-fields">
-				<th scope="row"><strong>Email address</strong></th>
+				<th scope="row"><strong>Email</strong></th>
 				<td>
 					<label>
 						<input type="radio" <?php if($wpcallback_plugin_option['field_email']) { checked('disabled', $wpcallback_plugin_option['field_email']); } else { echo 'checked="checked"'; }  ?> value="disabled" name="wpcallback_plugin_option[field_email]">
@@ -257,6 +264,101 @@ function wpcallback_admin_options() {
 						<input type="radio" <?php checked('required', $wpcallback_plugin_option['field_message']); ?> value="required" name="wpcallback_plugin_option[field_message]">
 						<span>Required</span>
 					</label>
+				</td>
+			</tr>
+
+		</table>
+
+		<h3>Field Label Options</h3>
+		<p>Options to customise field labels and palceholders</p>
+
+		<table class="form-table">
+
+			<tr valign="top" class="field_options_headings">
+				<th scope="row">&nbsp;</th>
+				<td>
+					<div class="field_label">
+						<p class="description">Field label</p>
+					</div>
+					<div class="field_placeholder">
+						<p class="description">Field placeholder</p>
+					</div>
+					<div class="clear"></div>
+				</td>
+			</tr>
+
+			<tr valign="top">
+				<th scope="row"><strong>Email</strong></th>
+				<td>
+					<div class="field_label">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_name]" value="<?php echo wpcallback_get_option('field_option_label_name'); ?>" />
+					</div>
+					<div class="field_placeholder">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_placeholder_name]" value="<?php echo wpcallback_get_option('field_option_placeholder_name'); ?>" />
+					</div>
+					<div class="clear"></div>
+				</td>
+			</tr>
+
+			<tr valign="top">
+				<th scope="row"><strong>Telephone</strong></th>
+				<td>
+					<div class="field_label">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_telephone]" value="<?php echo wpcallback_get_option('field_option_label_telephone'); ?>" />
+					</div>
+					<div class="field_placeholder">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_placeholder_telephone]" value="<?php echo wpcallback_get_option('field_option_placeholder_telephone'); ?>" />
+					</div>
+					<div class="clear"></div>
+				</td>
+			</tr>
+
+			<tr valign="top">
+				<th scope="row"><strong>Email</strong></th>
+				<td>
+					<div class="field_label">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_email]" value="<?php echo wpcallback_get_option('field_option_label_email'); ?>" />
+					</div>
+					<div class="field_placeholder">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_placeholder_email]" value="<?php echo wpcallback_get_option('field_option_placeholder_email'); ?>" />
+					</div>
+					<div class="clear"></div>
+				</td>
+			</tr>
+
+			<tr valign="top">
+				<th scope="row"><strong>When to call</strong></th>
+				<td>
+					<div class="field_label">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_time]" value="<?php echo wpcallback_get_option('field_option_label_time'); ?>" />
+					</div>
+					<div class="field_placeholder">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_placeholder_time]" value="<?php echo wpcallback_get_option('field_option_placeholder_time'); ?>" />
+					</div>
+					<div class="clear"></div>
+				</td>
+			</tr>
+
+			<tr valign="top">
+				<th scope="row"><strong>Message</strong></th>
+				<td>
+					<div class="field_label">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_message]" value="<?php echo wpcallback_get_option('field_option_label_message'); ?>" />
+					</div>
+					<div class="field_placeholder">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_placeholder_message]" value="<?php echo wpcallback_get_option('field_option_placeholder_message'); ?>" />
+					</div>
+					<div class="clear"></div>
+				</td>
+			</tr>
+
+			<tr valign="top">
+				<th scope="row"><strong>Submit</strong></th>
+				<td>
+					<div class="field_label">
+						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_submit]" value="<?php echo wpcallback_get_option('field_option_label_submit'); ?>" />
+					</div>
+					<div class="clear"></div>
 				</td>
 			</tr>
 

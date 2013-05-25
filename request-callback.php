@@ -79,7 +79,19 @@ function wpcallback_get_option($option) {
 		"allowable_to" => 19.5,
 		"field_email" => "disabled",
 		"field_time" => "disabled",
-		"field_message" => "disabled"
+		"field_message" => "disabled",
+		"field_option_label_name" => "Name",
+		"field_option_placeholder_name" => "Your name",
+		"field_option_label_telephone" => "Telephone",
+		"field_option_placeholder_telephone" => "Your telephone number",
+		"field_option_label_email" => "Email",
+		"field_option_placeholder_email" => "Your email",
+		"field_option_label_time" => "When to call",
+		"field_option_placeholder_time" => "Anytime",
+		"field_option_label_message" => "Message",
+		"field_option_placeholder_message" => "Your message",
+		"field_option_label_submit" => "Submit",
+		"width" => "400px"
 	);
 
 	if($value = $wpcallback_plugin_option[$option]) {
@@ -255,7 +267,8 @@ function wpcallback_action() {
 
 /* Display the button */
 function wpcallback_display_button() {
-	echo '<a href="' . wpcallback_get_callback_page() . '" class="callback-btn-style ' . wpcallback_get_styling() . ' ' . wpcallback_get_colour() . ' ' . wpcallback_get_position() . ' ' . wpcallback_get_option("classes") . ' callback-form-show">' . wpcallback_get_option("label") . '</a>';
+	$form_width = wpcallback_get_option('width');
+	echo '<a href="' . wpcallback_get_callback_page() . '" data-formwidth="' . $form_width . '" class="callback-btn-style ' . wpcallback_get_styling() . ' ' . wpcallback_get_colour() . ' ' . wpcallback_get_position() . ' ' . wpcallback_get_option("classes") . ' callback-form-show">' . wpcallback_get_option("label") . '</a>';
 }
 
 add_action('wpcallback_button', 'wpcallback_display_button');

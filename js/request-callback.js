@@ -1,7 +1,16 @@
 jQuery(document).ready(function($) {
+
+	var callbackFormWidth = $('.callback-btn').attr('data-formwidth');
+
+	if(!callbackFormWidth) {
+		callbackFormWidth = '400px';
+	}
+
+	$('.inline-container').width(callbackFormWidth);
+
 	if($.isFunction($.colorbox)){
 		$(".callback-form-show").colorbox({
-			width:"400px"
+			width:callbackFormWidth
 		});
 	}
 	jQuery(document).ready(function($) {
@@ -11,7 +20,7 @@ jQuery(document).ready(function($) {
 
 			$(formInputs).each(function() {
 				if($.trim(this.value) == '') {
-					fieldLabel = $(this).parent().find('span').html();
+					fieldLabel = $(this).parent().find('span.label-text').html();
 					errors += '- ' + fieldLabel + '\n';
 				}
 			});

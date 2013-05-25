@@ -18,20 +18,23 @@
 }
 
 .callback-form label span.callback-label {
-	font-weight: bold;
 	margin: 0 0 10px;
 	display: block;
 	padding: 0;
 }
 
-.callback-form label span.callback-label span {
-	font-weight: normal;
+.callback-form label span.callback-label span.input-required {
+	color: red;
+}
+
+.callback-form label span.callback-label span.label-text {
+	font-weight: bold;
 }
 
 .callback-form label input[type="text"] {
 	padding: 7px;
 	font-weight: normal;
-	width: 325px;
+	width: 97%;
 	display: block;
 }
 
@@ -41,12 +44,12 @@
 	border-width: 1px;
 	border-color: #DFDFDF;
 	padding: 4px;
-	width: 340px;
+	width: 100%;
 }
 
 .callback-form textarea {
 	padding: 7px;
-	width: 325px;
+	width: 95.5%;
 	height: 42px;
 }
 
@@ -93,7 +96,6 @@
 }
 
 #colorbox .callback-form label span.callback-label {
-	font-weight: bold;
 	margin: 0 0 10px;
 	display: block;
 	color: #444444;
@@ -102,12 +104,8 @@
 	line-height: 20px;
 }
 
-#colorbox .callback-form label span.callback-label span {
-	font-weight: normal;
-}
-
 #colorbox .callback-form label input[type="text"] {
-	width: 325px;
+	width: 95.5%;
 	padding: 7px;
 	font-weight: normal;
 	font-size: 12px;

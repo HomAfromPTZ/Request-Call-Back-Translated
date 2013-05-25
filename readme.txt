@@ -3,7 +3,7 @@ Contributors: scottsalisbury
 Tags: request call back, request callback, callback button, call back button, callback form, call back form
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -28,7 +28,10 @@ The plugin also provides the option to add the request form to an existing WordP
 * Button position
 * Enable or disable lightbox/embedded mode
 * Email address to send details
+* Optional email address, time to call and message form fields
 * Thank you page
+* Options to customise form field labels and placeholders
+* Options to customise the form width for both lightbox and embedded forms
 
 == Installation ==
 
@@ -68,6 +71,9 @@ In plugin settings "`Settings > Request Call Back`", scroll down and set "`Displ
 = v1.3 =
 * New feature. Three extra form fields can be added to the call back form (email address, time to call and message) via the plugin options.
 
+= v1.4 =
+* Added ability to customise form field labels/placeholders and customise the form width
+
 == Upgrade notice ==
 
 = v1.1 =
@@ -78,3 +84,6 @@ In plugin settings "`Settings > Request Call Back`", scroll down and set "`Displ
 
 = v1.3 =
 * New feature, three extra form fields can be added to the call back form (email address, time to call and message).
+
+= v1.4 =
+* Added ability to customise form field labels/placeholders and customise the form width
