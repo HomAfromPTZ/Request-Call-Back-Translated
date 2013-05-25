@@ -3,7 +3,7 @@ Contributors: scottsalisbury
 Tags: request call back, request callback, callback button, call back button, callback form, call back form
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: 1.4
+Stable tag: 1.4.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -71,7 +71,7 @@ In plugin settings "`Settings > Request Call Back`", scroll down and set "`Displ
 = v1.3 =
 * New feature. Three extra form fields can be added to the call back form (email address, time to call and message) via the plugin options.
 
-= v1.4 =
+= v1.4.1 =
 * Added ability to customise form field labels/placeholders and customise the form width
 
 == Upgrade notice ==
@@ -85,5 +85,5 @@ In plugin settings "`Settings > Request Call Back`", scroll down and set "`Displ
 = v1.3 =
 * New feature, three extra form fields can be added to the call back form (email address, time to call and message).
 
-= v1.4 =
+= v1.4.1 =
 * Added ability to customise form field labels/placeholders and customise the form width
