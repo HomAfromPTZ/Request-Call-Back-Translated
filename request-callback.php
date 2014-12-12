@@ -26,6 +26,12 @@ function wpcallback_register_scripts() {
 			wp_enqueue_script('wpcolorbox_js');
 		}
 		wp_register_script('wpcallback_js', plugins_url('js/request-callback.js', __FILE__), array( 'jquery' ));
+        
+        wp_localize_script( 'wpcallback_js', 'callbackL10n', array(
+            'missing'       => __('The following information is missing:', 'ssrcb'),
+            'wait'      => __('Please wait...', 'ssrcb'),
+        ) );
+        
 		wp_enqueue_script('wpcallback_js');
 	}
 }

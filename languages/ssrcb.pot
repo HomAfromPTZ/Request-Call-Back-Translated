@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 02:01+0400\n"
+"POT-Creation-Date: 2014-12-13 03:35+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -291,57 +291,65 @@ msgid ""
 "configure it in the plugin %s."
 msgstr ""
 
-#: request-callback.php:113
+#: request-callback.php:31
+msgid "The following information is missing:"
+msgstr ""
+
+#: request-callback.php:32
+msgid "Please wait..."
+msgstr ""
+
+#: request-callback.php:119
 msgid ""
 "Enter your details below to request a call back and we will get back in "
 "touch as soon as possible."
 msgstr ""
 
-#: request-callback.php:202
+#: request-callback.php:208
 msgid "Error sending mail"
 msgstr ""
 
-#: request-callback.php:228
+#: request-callback.php:234
 msgid ""
 "\n"
 "Email address: "
 msgstr ""
 
-#: request-callback.php:241
+#: request-callback.php:247
 msgid "Any time"
 msgstr ""
 
-#: request-callback.php:244
+#: request-callback.php:250
 msgid ""
 "\n"
 "When to call: "
 msgstr ""
 
-#: request-callback.php:248
+#: request-callback.php:254
 msgid ""
 "\n"
 "\n"
 "Message:\n"
 msgstr ""
 
-#: request-callback.php:251
+#: request-callback.php:257
 msgid "Call Back Request"
 msgstr ""
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid ""
 "A call back request has been sent with the following details:\n"
 "\n"
 "Name: "
 msgstr ""
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid ""
 "\n"
 "Telephone: "
 msgstr ""
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid ""
 "\n"
 "\n"
@@ -349,17 +357,17 @@ msgid ""
 "Sent from "
 msgstr ""
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid " via the Request Call Back plugin."
 msgstr ""
 
-#: request-callback.php:260
+#: request-callback.php:266
 msgid ""
 "There was a problem submitting your details, please try again later or "
 "manually write to us at"
 msgstr ""
 
-#: request-callback.php:284
+#: request-callback.php:290
 msgctxt "Plugin settings label"
 msgid "Settings"
 msgstr ""

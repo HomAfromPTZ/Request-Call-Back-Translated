@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# HomAfromPtz <homawebdew@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Request Call Back\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 02:01+0400\n"
-"PO-Revision-Date: 2014-12-13 02:03+0400\n"
+"POT-Creation-Date: 2014-12-13 03:35+0400\n"
+"PO-Revision-Date: 2014-12-13 03:36+0400\n"
 "Last-Translator: Лембинен Николай <homawebdev@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -307,17 +307,25 @@ msgstr ""
 "Не забудьте создать страницу для отображения формы заказа обратного звонка, "
 "а затем указать её на странице %s модуля."
 
-#: request-callback.php:113
+#: request-callback.php:31
+msgid "The following information is missing:"
+msgstr "Заполните следующие поля:"
+
+#: request-callback.php:32
+msgid "Please wait..."
+msgstr "Подождите..."
+
+#: request-callback.php:119
 msgid ""
 "Enter your details below to request a call back and we will get back in "
 "touch as soon as possible."
 msgstr "Укажите необходимые данные и мы свяжемся с вами в ближайшее время."
 
-#: request-callback.php:202
+#: request-callback.php:208
 msgid "Error sending mail"
 msgstr "Ошибка отправки сообщения"
 
-#: request-callback.php:228
+#: request-callback.php:234
 msgid ""
 "\n"
 "Email address: "
@@ -325,11 +333,11 @@ msgstr ""
 "\n"
 "Email адрес: "
 
-#: request-callback.php:241
+#: request-callback.php:247
 msgid "Any time"
 msgstr "В любое время"
 
-#: request-callback.php:244
+#: request-callback.php:250
 msgid ""
 "\n"
 "When to call: "
@@ -337,7 +345,7 @@ msgstr ""
 "\n"
 "Когда звонить: "
 
-#: request-callback.php:248
+#: request-callback.php:254
 msgid ""
 "\n"
 "\n"
@@ -347,11 +355,11 @@ msgstr ""
 "\n"
 "Сообщение:\n"
 
-#: request-callback.php:251
+#: request-callback.php:257
 msgid "Call Back Request"
 msgstr "Запрос обратного звонка"
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid ""
 "A call back request has been sent with the following details:\n"
 "\n"
@@ -361,7 +369,7 @@ msgstr ""
 "\n"
 "Имя: "
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid ""
 "\n"
 "Telephone: "
@@ -369,7 +377,7 @@ msgstr ""
 "\n"
 "Телефон: "
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid ""
 "\n"
 "\n"
@@ -381,11 +389,11 @@ msgstr ""
 "\n"
 "Отправлено от "
 
-#: request-callback.php:252
+#: request-callback.php:258
 msgid " via the Request Call Back plugin."
 msgstr "при помощи формы заказа обратного звонка."
 
-#: request-callback.php:260
+#: request-callback.php:266
 msgid ""
 "There was a problem submitting your details, please try again later or "
 "manually write to us at"
@@ -393,7 +401,7 @@ msgstr ""
 "Возникла проблема с отправкой ваших данных, попробуйте позже или напишите "
 "нам на"
 
-#: request-callback.php:284
+#: request-callback.php:290
 msgctxt "Plugin settings label"
 msgid "Settings"
 msgstr "Настройки"
