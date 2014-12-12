@@ -8,9 +8,11 @@
  * Author URI: http://www.scottsalisbury.co.uk
  * Version: 1.4.1
  * License: GPLv3
+ * Text Domain: ssrcb
+ * Domain Path: languages/
  */
 
-
+load_plugin_textdomain( 'ssrcb', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 $wpcallback_plugin_option  = get_option('wpcallback_plugin_option');
 
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'request-callback-admin.php');
@@ -108,7 +110,7 @@ function wpcallback_get_description() {
 		return $wpcallback_plugin_option['description'];
 	}
 	else {
-		return 'Enter your details below to request a call back and we will get back in touch as soon as possible.';
+		return __('Enter your details below to request a call back and we will get back in touch as soon as possible.', 'ssrcb');
 	}
 }
 
@@ -197,7 +199,7 @@ function wpcallback_action() {
 
 			/* The "Hear about us" field is a honeypot captcha hidden using CSS, if this field has data in it then assume it is a bot and cancel the request */
 			if(isset($_POST['hear_about_us']) && !empty($_POST['hear_about_us'])) {
-				echo 'Error sending mail';
+				echo __('Error sending mail', 'ssrcb');
 			}
 			elseif(isset($_POST['callback_name']) && isset($_POST['callback_telephone'])) {
 				$admin_email = wpcallback_get_option('email');
@@ -223,7 +225,7 @@ function wpcallback_action() {
 
 				$extra_fields = null;
 				if($email) {
-					$extra_fields .= "\nEmail address: " . $email;
+					$extra_fields .= __("\nEmail address: ", 'ssrcb') . $email;
 				}
 
 				if($time) {
@@ -236,18 +238,18 @@ function wpcallback_action() {
 						$string_time = $hour . ":" . $min;
 					}
 					else {
-						$string_time = 'Any time';
+						$string_time = __('Any time', 'ssrcb');
 					}
 
-					$extra_fields .= "\nWhen to call: " . $string_time;
+					$extra_fields .= __("\nWhen to call: ", 'ssrcb') . $string_time;
 				}
 
 				if($message) {
-					$extra_fields .= "\n\nMessage:\n" . $message;
+					$extra_fields .= __("\n\nMessage:\n", 'ssrcb') . $message;
 				}
 
-				$subject = "Call Back Request";
-				$message = "A call back request has been sent with the following details:\n\nName: " . $name . "\nTelephone: " . $telephone . $extra_fields . "\n\n\nSent from " . get_site_url() . " via the Request Call Back plugin.";
+				$subject = __("Call Back Request", 'ssrcb');
+				$message = __("A call back request has been sent with the following details:\n\nName: ", 'ssrcb') . $name . __("\nTelephone: ", 'ssrcb') . $telephone . $extra_fields . __("\n\n\nSent from ", 'ssrcb') . get_site_url() . __(" via the Request Call Back plugin.", 'ssrcb');
 
 				/* Send email */
 				if(wp_mail($admin_email, $subject, $message)) {
@@ -255,7 +257,7 @@ function wpcallback_action() {
 					exit;
 				}
 				else {
-					echo 'There was a problem submitting your details, please try again later or manually write to us at <a href="mailto:' . $admin_email . '">' . $admin_email . '</a>';
+					echo __('There was a problem submitting your details, please try again later or manually write to us at', 'ssrcb').' <a href="mailto:' . $admin_email . '">' . $admin_email . '</a>';
 				}
 			}
 		}
@@ -279,7 +281,7 @@ function wpcallback_settings_meta($links, $file) {
 	if ($file == $plugin) {
 		return array_merge(
 			$links,
-			array( '<a href="' . get_admin_url() . 'options-general.php?page=wpcallback">Settings</a>' )
+			array( '<a href="' . get_admin_url() . 'admin.php?page=wpcallback">'._x('Settings', 'Plugin settings label', 'ssrcb').'</a>' )
 		);
 	}
 	return $links;
@@ -288,5 +290,3 @@ function wpcallback_settings_meta($links, $file) {
 add_action('wp_head', 'wpcallback_output_custom_css');
 add_action('parse_request', 'wpcallback_action');
 add_filter('plugin_row_meta', 'wpcallback_settings_meta', 10, 2);
-
-

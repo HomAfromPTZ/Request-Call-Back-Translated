@@ -26,11 +26,11 @@ jQuery(document).ready(function($) {
 			});
 
 			if(errors.length > 0) {
-				alert('The following information is missing:\n\n' + errors);
+				alert('Заполните необходимые поля:\n\n' + errors);
 				return false;
 			}
 			else {
-				$('.submit-button').val('Please wait...');
+				$('.submit-button').val('Обработка...');
 				$('.submit-button').attr('disabled', 'disabled');
 				return true;
 			}

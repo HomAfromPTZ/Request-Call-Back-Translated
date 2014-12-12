@@ -5,8 +5,7 @@ function wpcallback_admin_init(){
 }
 
 function wpcallback_admin_add_page() {
-	$wpcallback_plugin_option_page = add_options_page('Request Call Back', 'Request Call Back', 'manage_options', 'wpcallback', 'wpcallback_admin_options');
-
+	$wpcallback_plugin_option_page = add_menu_page(_x('Request Call Back', 'Options page header title', 'ssrcb'), _x('Request Call Back', 'Options page menu title', 'ssrcb'), 'manage_options', 'wpcallback', 'wpcallback_admin_options', 'dashicons-email-alt');
 	add_action( 'admin_print_styles-' . $wpcallback_plugin_option_page, 'wpcallback_admin_styles' );
 	add_action( 'admin_print_scripts-' . $wpcallback_plugin_option_page, 'wpcallback_admin_scripts' );
 }
@@ -31,15 +30,15 @@ function wpcallback_admin_options() {
 
 <div class="wrap callback_options">
 	<div id="icon-options-general" class="icon32"></div>
-	<h2>Request Call Back Settings</h2>
+	<h2><?php _e('Request Call Back Settings', 'ssrcb')?></h2>
 
 	<form method="post" action="options.php">
 
 		<?php settings_fields('wpcallback_admin_options'); ?>
 		<?php $wpcallback_plugin_option = get_option('wpcallback_plugin_option'); ?>
 
-		<h3>Button Installation</h3>
-		<p>If you want to include a configurable call back button (required if using lightbox mode), copy and paste the following code in to the theme template file where you want the button to appear (e.g. header.php):</p>
+		<h3><?php _e('Button Installation', 'ssrcb')?></h3>
+		<p><?php _e('If you want to include a configurable call back button (required if using lightbox mode), copy and paste the following code in to the theme template file where you want the button to appear (e.g. header.php):', 'ssrcb')?></p>
 
 		<table class="form-table">
 			<tr valign="top">
@@ -49,32 +48,32 @@ function wpcallback_admin_options() {
 			</tr>
 		</table>
 
-		<h3>Button Options</h3>
-		<p>Options to customise button styling, colour, position and CSS</p>
+		<h3><?php _e('Button Options', 'ssrcb')?></h3>
+		<p><?php _e('Options to customise button styling, colour, position and CSS', 'ssrcb')?></p>
 
 		<table class="form-table">
 			<tr valign="top">
-				<th scope="row"><strong>Button label</strong></th>
+				<th scope="row"><strong><?php _e('Button label', 'ssrcb')?></strong></th>
 				<td>
 					<input type="text" class="regular-text" name="wpcallback_plugin_option[label]" value="<?php echo wpcallback_get_option('label'); ?>" />
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><strong>Button styling</strong></th>
+				<th scope="row"><strong><?php _e('Button styling', 'ssrcb')?></strong></th>
 				<td>
 					<label>
 						<input id="styling_custom" type="radio" <?php checked('custom', $wpcallback_plugin_option['styling']); ?> value="custom" name="wpcallback_plugin_option[styling]">
-						<span>Remove default styling</span> <span class="description">- Use this if you want to add your own styling</span>
+						<span><?php _e('Remove default styling', 'ssrcb')?></span> <span class="description"><?php _e('- Use this if you want to add your own styling', 'ssrcb')?></span>
 					</label>
 					<br>
 					<label>
 						<input id="styling_preset" type="radio" <?php if($wpcallback_plugin_option['styling']) { checked('preset', $wpcallback_plugin_option['styling']); } else { echo 'checked="checked"'; } ?> value="preset" name="wpcallback_plugin_option[styling]">
-						<span>Choose from a list of preset colours</span>
+						<span><?php _e('Choose from a list of preset colours', 'ssrcb')?></span>
 					</label>
 				</td>
 			</tr>
 			<tr valign="top" id="button_colour">
-				<th scope="row"><strong>Button colour</strong></th>
+				<th scope="row"><strong><?php _e('Button colour', 'ssrcb')?></strong></th>
 				<td>
 					<select name="wpcallback_plugin_option[colour]" id="button_colour_select">
 						<option value="default" <?php selected( 'default', $wpcallback_plugin_option['colour']); ?>>Default</option>
@@ -90,46 +89,46 @@ function wpcallback_admin_options() {
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><strong>Custom CSS</strong></th>
+				<th scope="row"><strong><?php _e('Custom CSS', 'ssrcb')?></strong></th>
 				<td>
 					<textarea name="wpcallback_plugin_option[custom_css]"><?php echo wpcallback_get_option('custom_css'); ?></textarea>
-					<p class="description">Add your own CSS styling to the button to suit your needs</p>
+					<p class="description"><?php _e('Add your own CSS styling to the button to suit your needs', 'ssrcb')?></p>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><strong>Custom CSS classes</strong></th>
+				<th scope="row"><strong><?php _e('Custom CSS classes', 'ssrcb')?></strong></th>
 				<td>
 					<input type="text" class="regular-text" name="wpcallback_plugin_option[classes]" value="<?php echo wpcallback_get_option('classes'); ?>" />
-					<p class="description">Separate with spaces</p>
+					<p class="description"><?php _e('Separate with spaces', 'ssrcb')?></p>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><strong>Button position</strong></th>
+				<th scope="row"><strong><?php _e('Button position', 'ssrcb')?></strong></th>
 				<td>
 					<select name="wpcallback_plugin_option[position]">
-						<option value="right" <?php selected( 'right', $wpcallback_plugin_option['position']); ?>>Float right</option>
-						<option value="left" <?php selected( 'left', $wpcallback_plugin_option['position']); ?>>Float left</option>
-						<option value="none" <?php selected( 'none', $wpcallback_plugin_option['position']); ?>>None</option>
+						<option value="right" <?php selected( 'right', $wpcallback_plugin_option['position']); ?>><?php _e('Float right', 'ssrcb')?></option>
+						<option value="left" <?php selected( 'left', $wpcallback_plugin_option['position']); ?>><?php _e('Float left', 'ssrcb')?></option>
+						<option value="none" <?php selected( 'none', $wpcallback_plugin_option['position']); ?>><?php _e('None', 'ssrcb')?></option>
 					</select>
 				</td>
 			</tr>
 		</table>
 
-		<h3>General Options</h3>
-		<p>Options to customise overall functionality of the plugin</p>
+		<h3><?php _e('General Options', 'ssrcb')?></h3>
+		<p><?php _e('Options to customise overall functionality of the plugin', 'ssrcb')?></p>
 
 		<table class="form-table">
 			<tr valign="top">
-				<th scope="row"><strong>Display mode</strong></th>
+				<th scope="row"><strong><?php _e('Display mode', 'ssrcb')?></strong></th>
 				<td>
 					<label>
 						<input type="radio" <?php if($wpcallback_plugin_option['lightbox']) { checked('enabled', $wpcallback_plugin_option['lightbox']); } else { echo 'checked="checked"'; }  ?> value="enabled" name="wpcallback_plugin_option[lightbox]">
-						<span>Open form in a lightbox</span> <span class="description">- Requires button code to be installed</span>
+						<span><?php _e('Open form in a lightbox', 'ssrcb')?></span> <span class="description"><?php _e('- Requires button code to be installed', 'ssrcb')?></span>
 					</label>
 					<br>
 					<label>
 						<input type="radio" <?php checked('disabled', $wpcallback_plugin_option['lightbox']); ?> value="disabled" name="wpcallback_plugin_option[lightbox]">
-						<span>Display form on an existing page</span>
+						<span><?php _e('Display form on an existing page', 'ssrcb')?></span>
 					</label>
 				</td>
 			</tr>
@@ -149,30 +148,30 @@ function wpcallback_admin_options() {
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><strong>Form Width</strong></th>
+				<th scope="row"><strong><?php _e('Form Width', 'ssrcb')?></strong></th>
 				<td>
 					<input type="text" class="input-width regular-text" name="wpcallback_plugin_option[width]" value="<?php echo wpcallback_get_option('width'); ?>" />
-					<p class="description">Supports pixels or percent, for example 400px or 50%</p>
+					<p class="description"><?php _e('Supports pixels or percent, for example 400px or 50%', 'ssrcb')?></p>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><strong>Form content</strong></th>
+				<th scope="row"><strong><?php _e('Form content', 'ssrcb')?></strong></th>
 				<td>
 					<textarea name="wpcallback_plugin_option[description]"><?php echo wpcallback_get_description(); ?></textarea>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><strong>Email address</strong></th>
+				<th scope="row"><strong><?php _e('Email address', 'ssrcb')?></strong></th>
 				<td>
 					<input type="text" class="regular-text" name="wpcallback_plugin_option[email]" value="<?php echo wpcallback_get_option('email'); ?>" />
-					<p class="description">Who to send the call back information to</p>
+					<p class="description"><?php _e('Who to send the call back information to', 'ssrcb')?></p>
 				</td>
 			</tr>
 			<tr valign="top" id="thankyoupage" <?php if(!$wpcallback_plugin_option['target']) : echo 'class="not-set"'; endif; ?>>
-				<th scope="row"><strong>Thank you page</strong></th>
+				<th scope="row"><strong><?php _e('Thank you page', 'ssrcb')?></strong></th>
 				<td>
 					<select name="wpcallback_plugin_option[target]">
-						<option value="" class="choose-page">Select page</option>
+						<option value="" class="choose-page"><?php _e('Select page', 'ssrcb')?></option>
 						<?php foreach($all_post_types as $type) : ?>
 							<?php $query_all_posts = new WP_Query(array('post_type' => $type, 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC')); ?>
 							<optgroup label="<?php echo get_post_type_object($type)->labels->name; ?>">
@@ -182,64 +181,69 @@ function wpcallback_admin_options() {
 							</optgroup>
 						<?php endforeach; ?>
 					</select>
-					<p class="description" style="margin-bottom: 0;">Where to send the visitor after the request has been sent successfully</p>
+					<p class="description" style="margin-bottom: 0;"><?php _e('Where to send the visitor after the request has been sent successfully', 'ssrcb')?></p>
 				</td>
 			</tr>
 		</table>
 
-		<h3>Extra Field Options</h3>
-		<p>Options to add additional form fields to the request form and whether to make them optional or required</p>
+		<h3><?php _e('Extra Field Options', 'ssrcb')?></h3>
+		<p><?php _e('Options to add additional form fields to the request form and whether to make them optional or required', 'ssrcb')?></p>
 
 		<table class="form-table">
 			<tr valign="top" class="configure-form-fields">
-				<th scope="row"><strong>Email</strong></th>
+				<th scope="row"><strong><?php _e('Email', 'ssrcb')?></strong></th>
 				<td>
+				    <?php
+				        $disabled_label = _x('Disabled', 'Disabled label', 'ssrcb');
+                        $optional_label = _x('Optional', 'Optional label', 'ssrcb');
+                        $required_label = _x('Required', 'Required label', 'ssrcb');
+				    ?>
 					<label>
 						<input type="radio" <?php if($wpcallback_plugin_option['field_email']) { checked('disabled', $wpcallback_plugin_option['field_email']); } else { echo 'checked="checked"'; }  ?> value="disabled" name="wpcallback_plugin_option[field_email]">
-						<span>Disabled</span>
+						<span><?php echo $disabled_label?></span>
 					</label>
 
 					<label>
 						<input type="radio" <?php checked('optional', $wpcallback_plugin_option['field_email']); ?> value="optional" name="wpcallback_plugin_option[field_email]">
-						<span>Optional</span>
+						<span><?php echo $optional_label?></span>
 					</label>
 
 					<label>
 						<input type="radio" <?php checked('required', $wpcallback_plugin_option['field_email']); ?> value="required" name="wpcallback_plugin_option[field_email]">
-						<span>Required</span>
+						<span><?php echo $required_label?></span>
 					</label>
 				</td>
 			</tr>
 			<tr valign="top" class="configure-form-fields">
-				<th scope="row"><strong>When to call</strong></th>
+				<th scope="row"><strong><?php _e('When to call', 'ssrcb')?></strong></th>
 				<td>
 					<label>
 						<input class="available_times_disabled" type="radio" <?php if($wpcallback_plugin_option['field_time']) { checked('disabled', $wpcallback_plugin_option['field_time']); } else { echo 'checked="checked"'; }  ?> value="disabled" name="wpcallback_plugin_option[field_time]">
-						<span>Disabled</span>
+						<span><?php echo $disabled_label?></span>
 					</label>
 
 					<label>
 						<input class="available_times_enabled" type="radio" <?php checked('optional', $wpcallback_plugin_option['field_time']); ?> value="optional" name="wpcallback_plugin_option[field_time]">
-						<span>Optional</span>
+						<span><?php echo $optional_label?></span>
 					</label>
 
 					<label>
 						<input class="available_times_enabled" type="radio" <?php checked('required', $wpcallback_plugin_option['field_time']); ?> value="required" name="wpcallback_plugin_option[field_time]">
-						<span>Required</span>
+						<span><?php echo $required_label?></span>
 					</label>
 				</td>
 			</tr>
 			<tr valign="top" class="configure-form-fields" id="available_times">
 				<th scope="row">&nbsp;</th>
 				<td>
-					Allow visitors to select between
+					<?php _e('Allow visitors to select between', 'ssrcb')?>
 					<select name="wpcallback_plugin_option[allowable_from]">
 						<?php $allowable = build_time_intervals(0, 24, 0.5) ?>
 						<?php foreach($allowable as $item) : ?>
 						<option value="<?php echo $item['decimal']; ?>" <?php if($wpcallback_plugin_option['allowable_from']) { selected($item['decimal'], $wpcallback_plugin_option['allowable_from']); } elseif($item['decimal'] == 8.5) { echo 'selected="selected"'; } ?>><?php echo $item['time']; ?></option>
 						<?php endforeach; ?>
 					</select>
-					<span> and </span>
+					<span><?php _e('and', 'ssrcb')?> </span>
 					<select name="wpcallback_plugin_option[allowable_to]">
 						<?php foreach($allowable as $item) : ?>
 						<option value="<?php echo $item['decimal']; ?>" <?php if($wpcallback_plugin_option['allowable_to']) { selected($item['decimal'], $wpcallback_plugin_option['allowable_to']); } elseif($item['decimal'] == 19.5) { echo 'selected="selected"'; } ?>><?php echo $item['time']; ?></option>
@@ -248,29 +252,29 @@ function wpcallback_admin_options() {
 				</td>
 			</tr>
 			<tr valign="top" class="configure-form-fields">
-				<th scope="row"><strong>Message</strong></th>
+				<th scope="row"><strong><?php _e('Message', 'ssrcb')?></strong></th>
 				<td>
 					<label>
 						<input type="radio" <?php if($wpcallback_plugin_option['field_message']) { checked('disabled', $wpcallback_plugin_option['field_message']); } else { echo 'checked="checked"'; }  ?> value="disabled" name="wpcallback_plugin_option[field_message]">
-						<span>Disabled</span>
+						<span><?php echo $disabled_label?></span>
 					</label>
 
 					<label>
 						<input type="radio" <?php checked('optional', $wpcallback_plugin_option['field_message']); ?> value="optional" name="wpcallback_plugin_option[field_message]">
-						<span>Optional</span>
+						<span><?php echo $optional_label?></span>
 					</label>
 
 					<label>
 						<input type="radio" <?php checked('required', $wpcallback_plugin_option['field_message']); ?> value="required" name="wpcallback_plugin_option[field_message]">
-						<span>Required</span>
+						<span><?php echo $required_label?></span>
 					</label>
 				</td>
 			</tr>
 
 		</table>
 
-		<h3>Field Label Options</h3>
-		<p>Options to customise field labels and palceholders</p>
+		<h3><?php _e('Field Label Options', 'ssrcb')?></h3>
+		<p><?php _e('Options to customise field labels and palceholders', 'ssrcb')?></p>
 
 		<table class="form-table">
 
@@ -278,17 +282,17 @@ function wpcallback_admin_options() {
 				<th scope="row">&nbsp;</th>
 				<td>
 					<div class="field_label">
-						<p class="description">Field label</p>
+						<p class="description"><?php _e('Field label', 'ssrcb')?></p>
 					</div>
 					<div class="field_placeholder">
-						<p class="description">Field placeholder</p>
+						<p class="description"><?php _e('Field placeholder', 'ssrcb')?></p>
 					</div>
 					<div class="clear"></div>
 				</td>
 			</tr>
 
 			<tr valign="top">
-				<th scope="row"><strong>Email</strong></th>
+				<th scope="row"><strong><?php _e('Name', 'ssrcb')?></strong></th>
 				<td>
 					<div class="field_label">
 						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_name]" value="<?php echo wpcallback_get_option('field_option_label_name'); ?>" />
@@ -301,7 +305,7 @@ function wpcallback_admin_options() {
 			</tr>
 
 			<tr valign="top">
-				<th scope="row"><strong>Telephone</strong></th>
+				<th scope="row"><strong><?php _e('Telephone', 'ssrcb')?></strong></th>
 				<td>
 					<div class="field_label">
 						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_telephone]" value="<?php echo wpcallback_get_option('field_option_label_telephone'); ?>" />
@@ -314,7 +318,7 @@ function wpcallback_admin_options() {
 			</tr>
 
 			<tr valign="top">
-				<th scope="row"><strong>Email</strong></th>
+				<th scope="row"><strong><?php _e('Email', 'ssrcb')?></strong></th>
 				<td>
 					<div class="field_label">
 						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_email]" value="<?php echo wpcallback_get_option('field_option_label_email'); ?>" />
@@ -327,7 +331,7 @@ function wpcallback_admin_options() {
 			</tr>
 
 			<tr valign="top">
-				<th scope="row"><strong>When to call</strong></th>
+				<th scope="row"><strong><?php _e('When to call', 'ssrcb')?></strong></th>
 				<td>
 					<div class="field_label">
 						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_time]" value="<?php echo wpcallback_get_option('field_option_label_time'); ?>" />
@@ -340,7 +344,7 @@ function wpcallback_admin_options() {
 			</tr>
 
 			<tr valign="top">
-				<th scope="row"><strong>Message</strong></th>
+				<th scope="row"><strong><?php _e('Message', 'ssrcb')?></strong></th>
 				<td>
 					<div class="field_label">
 						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_message]" value="<?php echo wpcallback_get_option('field_option_label_message'); ?>" />
@@ -353,7 +357,7 @@ function wpcallback_admin_options() {
 			</tr>
 
 			<tr valign="top">
-				<th scope="row"><strong>Submit</strong></th>
+				<th scope="row"><strong><?php _e('Submit', 'ssrcb')?></strong></th>
 				<td>
 					<div class="field_label">
 						<input type="text" class="regular-text" name="wpcallback_plugin_option[field_option_label_submit]" value="<?php echo wpcallback_get_option('field_option_label_submit'); ?>" />
@@ -364,32 +368,32 @@ function wpcallback_admin_options() {
 
 		</table>
 
-		<h3>Advanced Options</h3>
-		<p>Options to enable or disable Colorbox scripts for lightbox display mode</p>
-		<p class="description">Note: this plugin comes with the <a target="_blank" href="http://www.jacklmoore.com/colorbox/">Colorbox</a> jQuery plugin to allow the call back form to open in a lightbox. <br>If you think this plugin is conflicting with other plugins that use lightboxes, you can control it using these options.</p>
+		<h3><?php _e('Advanced Options', 'ssrcb')?></h3>
+		<p><?php _e('Options to enable or disable Colorbox scripts for lightbox display mode', 'ssrcb')?></p>
+		<p class="description"><?php printf(__('Note: this plugin comes with the %s jQuery plugin to allow the call back form to open in a lightbox. <br>If you think this plugin is conflicting with other plugins that use lightboxes, you can control it using these options.', 'ssrcb'), '<a target="_blank" href="http://www.jacklmoore.com/colorbox/">Colorbox</a>')?></p>
 
 		<table class="form-table">
 			<tr valign="top">
-				<th scope="row"><strong>Colorbox</strong></th>
+				<th scope="row"><strong><?php _e('Colorbox', 'ssrcb')?></strong></th>
 				<td>
 					<label>
 						<input type="radio" <?php if($wpcallback_plugin_option['colorbox']) { checked('enabled', $wpcallback_plugin_option['colorbox']); } else { echo 'checked="checked"'; }  ?> value="enabled" name="wpcallback_plugin_option[colorbox]">
-						<span>Enable Colorbox</span>
+						<span><?php _e('Enable Colorbox', 'ssrcb')?></span>
 					</label>
 					<br>
 					<label>
 						<input type="radio" <?php checked('custom', $wpcallback_plugin_option['colorbox']); ?> value="custom" name="wpcallback_plugin_option[colorbox]">
-						<span>Disable Colorbox</span> <span class="description">- Only use this if Colorbox is already installed</span>
+						<span><?php _e('Disable Colorbox', 'ssrcb')?></span> <span class="description"><?php _e('- Only use this if Colorbox is already installed', 'ssrcb')?></span>
 					</label>
 				</td>
 			</tr>
 		</table>
 
 		<p class="submit">
-			<input type="submit" class="button-primary" value="Save Changes" />
+			<input type="submit" class="button-primary" value="<?php _e('Save Changes', 'ssrcb')?>" />
 		</p>
 
-		<p class="wpcallback-footer">Request Call Back Plugin by <a target="_blank" href="http://www.scottsalisbury.co.uk">Scott Salisbury</a></p>
+		<p class="wpcallback-footer"><?php printf(__('Request Call Back Plugin by %s', 'ssrcb'), '<a target="_blank" href="http://www.scottsalisbury.co.uk">Scott Salisbury</a>')?></p>
 	</form>
 </div>
 
@@ -402,7 +406,8 @@ function wpcallback_admin_target_page_notice() {
 
 	if(!$wpcallback_plugin_option['target']) : ?>
 	<div class="error">
-		<p><strong>Request Call Back Plugin:</strong> Don't forget to create a thank you page for the request call back form and configure it in the plugin <a href="<?php echo get_admin_url(); ?>options-general.php?page=wpcallback#thankyoupage">settings</a>.</p>
+	    <?php $settings_message_url = '<a href="'.get_admin_url().'admin.php?page=wpcallback#thankyoupage">'.__('settings', 'ssrcb').'</a>';?>
+		<p><strong><?php _e('Request Call Back Plugin:', 'ssrcb')?></strong> <?php printf(__("Don't forget to create a thank you page for the request call back form and configure it in the plugin %s.", 'ssrcb'), $settings_message_url)?></p>
 	</div>
 	<?php endif;
 }

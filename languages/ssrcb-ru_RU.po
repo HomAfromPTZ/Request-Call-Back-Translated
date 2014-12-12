@@ -1,0 +1,414 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Request Call Back\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-13 02:01+0400\n"
+"PO-Revision-Date: 2014-12-13 02:03+0400\n"
+"Last-Translator: Лембинен Николай <homawebdev@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: request-callback-admin.php:8
+msgctxt "Options page header title"
+msgid "Request Call Back"
+msgstr "Заказать звонок"
+
+#: request-callback-admin.php:8
+msgctxt "Options page menu title"
+msgid "Request Call Back"
+msgstr "Заказать звонок"
+
+#: request-callback-admin.php:33
+msgid "Request Call Back Settings"
+msgstr "Заказать звонок, настройки"
+
+#: request-callback-admin.php:40
+msgid "Button Installation"
+msgstr "Установка кнопки"
+
+#: request-callback-admin.php:41
+msgid ""
+"If you want to include a configurable call back button (required if using "
+"lightbox mode), copy and paste the following code in to the theme template "
+"file where you want the button to appear (e.g. header.php):"
+msgstr ""
+"Если вы хотите установить редактируемую кнопку заказа звонка (необходимо при "
+"использовании режима lightbox), <br/>скопируйте и вставте следующий код в "
+"шаблон той страницы где вы хотите её отобразить (например header.php):"
+
+#: request-callback-admin.php:51
+msgid "Button Options"
+msgstr "Настройка кнопки"
+
+#: request-callback-admin.php:52
+msgid "Options to customise button styling, colour, position and CSS"
+msgstr "Изменение стиля, цвета, расположения и CSS"
+
+#: request-callback-admin.php:56
+msgid "Button label"
+msgstr "Текст на кнопке"
+
+#: request-callback-admin.php:62
+msgid "Button styling"
+msgstr "Стиль кнопки"
+
+#: request-callback-admin.php:66
+msgid "Remove default styling"
+msgstr "Не использовать стиль по умолчанию"
+
+#: request-callback-admin.php:66
+msgid "- Use this if you want to add your own styling"
+msgstr "- включите, если вы используете собственный стиль"
+
+#: request-callback-admin.php:71
+msgid "Choose from a list of preset colours"
+msgstr "Выбор изи списка цветовых схем"
+
+#: request-callback-admin.php:76
+msgid "Button colour"
+msgstr "Цвет кнопки"
+
+#: request-callback-admin.php:92
+msgid "Custom CSS"
+msgstr "Альтернативный CSS"
+
+#: request-callback-admin.php:95
+msgid "Add your own CSS styling to the button to suit your needs"
+msgstr "Вставте собственный CSS код"
+
+#: request-callback-admin.php:99
+msgid "Custom CSS classes"
+msgstr "Альтернативные CSS классы"
+
+#: request-callback-admin.php:102
+msgid "Separate with spaces"
+msgstr "Разделите пробелом"
+
+#: request-callback-admin.php:106
+msgid "Button position"
+msgstr "Расположение"
+
+#: request-callback-admin.php:109
+msgid "Float right"
+msgstr "По правому краю"
+
+#: request-callback-admin.php:110
+msgid "Float left"
+msgstr "По левому краю"
+
+#: request-callback-admin.php:111
+msgid "None"
+msgstr "Не выравнивать"
+
+#: request-callback-admin.php:117
+msgid "General Options"
+msgstr "Основные настройки"
+
+#: request-callback-admin.php:118
+msgid "Options to customise overall functionality of the plugin"
+msgstr "Общая функциональность"
+
+#: request-callback-admin.php:122
+msgid "Display mode"
+msgstr "Режим отображения"
+
+#: request-callback-admin.php:126
+msgid "Open form in a lightbox"
+msgstr "Открыть окно с формой при помощи lightbox"
+
+#: request-callback-admin.php:126
+msgid "- Requires button code to be installed"
+msgstr "- требует установки кода кнопки в шаблон"
+
+#: request-callback-admin.php:131
+msgid "Display form on an existing page"
+msgstr "Показать форму на созданной специально странице"
+
+#: request-callback-admin.php:151
+msgid "Form Width"
+msgstr "Ширина формы"
+
+#: request-callback-admin.php:154
+msgid "Supports pixels or percent, for example 400px or 50%"
+msgstr "Поддерживаются пиксели или проценты, например 400px или 50%"
+
+#: request-callback-admin.php:158
+msgid "Form content"
+msgstr "Содержимое формы"
+
+#: request-callback-admin.php:164
+msgid "Email address"
+msgstr "Email адрес"
+
+#: request-callback-admin.php:167
+msgid "Who to send the call back information to"
+msgstr "Кому отправлять информацию о заказанном звонке?"
+
+#: request-callback-admin.php:171
+msgid "Thank you page"
+msgstr "Страница благодарности"
+
+#: request-callback-admin.php:174
+msgid "Select page"
+msgstr "Укажите страницу"
+
+#: request-callback-admin.php:184
+msgid "Where to send the visitor after the request has been sent successfully"
+msgstr ""
+"Куда перенаправить пользователя, после успешной отправки формы заказа звонка"
+
+#: request-callback-admin.php:189
+msgid "Extra Field Options"
+msgstr "Настройка дополнительных полей"
+
+#: request-callback-admin.php:190
+msgid ""
+"Options to add additional form fields to the request form and whether to "
+"make them optional or required"
+msgstr ""
+"Возможность добавить дополнительные поля в форму, а также указать "
+"обязательность их заполнения"
+
+#: request-callback-admin.php:194 request-callback-admin.php:321
+msgid "Email"
+msgstr "Email клиента"
+
+#: request-callback-admin.php:197
+msgctxt "Disabled label"
+msgid "Disabled"
+msgstr "Отключено"
+
+#: request-callback-admin.php:198
+msgctxt "Optional label"
+msgid "Optional"
+msgstr "Не обязательное"
+
+#: request-callback-admin.php:199
+msgctxt "Required label"
+msgid "Required"
+msgstr "Обязательное"
+
+#: request-callback-admin.php:218 request-callback-admin.php:334
+msgid "When to call"
+msgstr "Когда звонить"
+
+#: request-callback-admin.php:239
+msgid "Allow visitors to select between"
+msgstr "Позволить клиенту выбрать между"
+
+#: request-callback-admin.php:246
+msgid "and"
+msgstr "и"
+
+#: request-callback-admin.php:255 request-callback-admin.php:347
+msgid "Message"
+msgstr "Сообщение"
+
+#: request-callback-admin.php:276
+msgid "Field Label Options"
+msgstr "Настройка заголовков полей"
+
+#: request-callback-admin.php:277
+msgid "Options to customise field labels and palceholders"
+msgstr "Укажите заголовки для полей формы и текст для подсказки"
+
+#: request-callback-admin.php:285
+msgid "Field label"
+msgstr "Заголовок"
+
+#: request-callback-admin.php:288
+msgid "Field placeholder"
+msgstr "Подсказка"
+
+#: request-callback-admin.php:295
+msgid "Name"
+msgstr "Имя"
+
+#: request-callback-admin.php:308
+msgid "Telephone"
+msgstr "Телефон"
+
+#: request-callback-admin.php:360
+msgid "Submit"
+msgstr "Кнопка отправки"
+
+#: request-callback-admin.php:371
+msgid "Advanced Options"
+msgstr "Расширенные настройки"
+
+#: request-callback-admin.php:372
+msgid "Options to enable or disable Colorbox scripts for lightbox display mode"
+msgstr ""
+"Возможность включить или выключить скрипты Colorbox для режима Lightbox"
+
+#: request-callback-admin.php:373
+#, php-format
+msgid ""
+"Note: this plugin comes with the %s jQuery plugin to allow the call back "
+"form to open in a lightbox. <br>If you think this plugin is conflicting with "
+"other plugins that use lightboxes, you can control it using these options."
+msgstr ""
+"Замечание: данное дополнение сопровождается jQuery плагином %s, который "
+"позволяет форме заказа отображаться при помощи lightbox. <br>Если вам "
+"кажется, что этот плагин конфликтует с другими дополнениями которые "
+"используют lightbox, вы можете проконтролировать это при помощи данных "
+"настроек."
+
+#: request-callback-admin.php:377
+msgid "Colorbox"
+msgstr "Colorbox"
+
+#: request-callback-admin.php:381
+msgid "Enable Colorbox"
+msgstr "Включить"
+
+#: request-callback-admin.php:386
+msgid "Disable Colorbox"
+msgstr "Выключить"
+
+#: request-callback-admin.php:386
+msgid "- Only use this if Colorbox is already installed"
+msgstr "- Используйте только в том случае, если Colorbox уже установлен"
+
+#: request-callback-admin.php:393
+msgid "Save Changes"
+msgstr "Сохранить настройки"
+
+#: request-callback-admin.php:396
+#, php-format
+msgid "Request Call Back Plugin by %s"
+msgstr "Плагин за авторством %s"
+
+#: request-callback-admin.php:409
+msgid "settings"
+msgstr "настроек"
+
+#: request-callback-admin.php:410
+msgid "Request Call Back Plugin:"
+msgstr "Модуль заказа звонка:"
+
+#: request-callback-admin.php:410
+#, php-format
+msgid ""
+"Don't forget to create a thank you page for the request call back form and "
+"configure it in the plugin %s."
+msgstr ""
+"Не забудьте создать страницу для отображения формы заказа обратного звонка, "
+"а затем указать её на странице %s модуля."
+
+#: request-callback.php:113
+msgid ""
+"Enter your details below to request a call back and we will get back in "
+"touch as soon as possible."
+msgstr "Укажите необходимые данные и мы свяжемся с вами в ближайшее время."
+
+#: request-callback.php:202
+msgid "Error sending mail"
+msgstr "Ошибка отправки сообщения"
+
+#: request-callback.php:228
+msgid ""
+"\n"
+"Email address: "
+msgstr ""
+"\n"
+"Email адрес: "
+
+#: request-callback.php:241
+msgid "Any time"
+msgstr "В любое время"
+
+#: request-callback.php:244
+msgid ""
+"\n"
+"When to call: "
+msgstr ""
+"\n"
+"Когда звонить: "
+
+#: request-callback.php:248
+msgid ""
+"\n"
+"\n"
+"Message:\n"
+msgstr ""
+"\n"
+"\n"
+"Сообщение:\n"
+
+#: request-callback.php:251
+msgid "Call Back Request"
+msgstr "Запрос обратного звонка"
+
+#: request-callback.php:252
+msgid ""
+"A call back request has been sent with the following details:\n"
+"\n"
+"Name: "
+msgstr ""
+"Запрос обратного звонка был отправлен с параметрами:\n"
+"\n"
+"Имя: "
+
+#: request-callback.php:252
+msgid ""
+"\n"
+"Telephone: "
+msgstr ""
+"\n"
+"Телефон: "
+
+#: request-callback.php:252
+msgid ""
+"\n"
+"\n"
+"\n"
+"Sent from "
+msgstr ""
+"\n"
+"\n"
+"\n"
+"Отправлено от "
+
+#: request-callback.php:252
+msgid " via the Request Call Back plugin."
+msgstr "при помощи формы заказа обратного звонка."
+
+#: request-callback.php:260
+msgid ""
+"There was a problem submitting your details, please try again later or "
+"manually write to us at"
+msgstr ""
+"Возникла проблема с отправкой ваших данных, попробуйте позже или напишите "
+"нам на"
+
+#: request-callback.php:284
+msgctxt "Plugin settings label"
+msgid "Settings"
+msgstr "Настройки"
+
+#. Plugin Name of the plugin/theme
+msgid "Request Call Back"
+msgstr "Заказать звонок"
+
+#. Description of the plugin/theme
+msgid ""
+"Adds a simple, configurable request call back form to WordPress. Visitors "
+"can request a call back by providing their name and number via lightbox (or "
+"embedded form), which is then sent to the site owner via email."
+msgstr ""
+"Добавляет простую и настраиваемую форму заказа обратного звонка. Посетители "
+"могут запросить обратный звонок указав свое имя и номер телефона в форме "
+"которая будет отправлена владельцу сайта по email. Форма может отображаться "
+"на отдельной странице или при помощи lightbox."

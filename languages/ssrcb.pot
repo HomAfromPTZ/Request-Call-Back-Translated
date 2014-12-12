@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# HomAfromPtz <homawebdew@gmail.com>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-13 02:01+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: request-callback-admin.php:8
+msgctxt "Options page header title"
+msgid "Request Call Back"
+msgstr ""
+
+#: request-callback-admin.php:8
+msgctxt "Options page menu title"
+msgid "Request Call Back"
+msgstr ""
+
+#: request-callback-admin.php:33
+msgid "Request Call Back Settings"
+msgstr ""
+
+#: request-callback-admin.php:40
+msgid "Button Installation"
+msgstr ""
+
+#: request-callback-admin.php:41
+msgid ""
+"If you want to include a configurable call back button (required if using "
+"lightbox mode), copy and paste the following code in to the theme template "
+"file where you want the button to appear (e.g. header.php):"
+msgstr ""
+
+#: request-callback-admin.php:51
+msgid "Button Options"
+msgstr ""
+
+#: request-callback-admin.php:52
+msgid "Options to customise button styling, colour, position and CSS"
+msgstr ""
+
+#: request-callback-admin.php:56
+msgid "Button label"
+msgstr ""
+
+#: request-callback-admin.php:62
+msgid "Button styling"
+msgstr ""
+
+#: request-callback-admin.php:66
+msgid "Remove default styling"
+msgstr ""
+
+#: request-callback-admin.php:66
+msgid "- Use this if you want to add your own styling"
+msgstr ""
+
+#: request-callback-admin.php:71
+msgid "Choose from a list of preset colours"
+msgstr ""
+
+#: request-callback-admin.php:76
+msgid "Button colour"
+msgstr ""
+
+#: request-callback-admin.php:92
+msgid "Custom CSS"
+msgstr ""
+
+#: request-callback-admin.php:95
+msgid "Add your own CSS styling to the button to suit your needs"
+msgstr ""
+
+#: request-callback-admin.php:99
+msgid "Custom CSS classes"
+msgstr ""
+
+#: request-callback-admin.php:102
+msgid "Separate with spaces"
+msgstr ""
+
+#: request-callback-admin.php:106
+msgid "Button position"
+msgstr ""
+
+#: request-callback-admin.php:109
+msgid "Float right"
+msgstr ""
+
+#: request-callback-admin.php:110
+msgid "Float left"
+msgstr ""
+
+#: request-callback-admin.php:111
+msgid "None"
+msgstr ""
+
+#: request-callback-admin.php:117
+msgid "General Options"
+msgstr ""
+
+#: request-callback-admin.php:118
+msgid "Options to customise overall functionality of the plugin"
+msgstr ""
+
+#: request-callback-admin.php:122
+msgid "Display mode"
+msgstr ""
+
+#: request-callback-admin.php:126
+msgid "Open form in a lightbox"
+msgstr ""
+
+#: request-callback-admin.php:126
+msgid "- Requires button code to be installed"
+msgstr ""
+
+#: request-callback-admin.php:131
+msgid "Display form on an existing page"
+msgstr ""
+
+#: request-callback-admin.php:151
+msgid "Form Width"
+msgstr ""
+
+#: request-callback-admin.php:154
+msgid "Supports pixels or percent, for example 400px or 50%"
+msgstr ""
+
+#: request-callback-admin.php:158
+msgid "Form content"
+msgstr ""
+
+#: request-callback-admin.php:164
+msgid "Email address"
+msgstr ""
+
+#: request-callback-admin.php:167
+msgid "Who to send the call back information to"
+msgstr ""
+
+#: request-callback-admin.php:171
+msgid "Thank you page"
+msgstr ""
+
+#: request-callback-admin.php:174
+msgid "Select page"
+msgstr ""
+
+#: request-callback-admin.php:184
+msgid "Where to send the visitor after the request has been sent successfully"
+msgstr ""
+
+#: request-callback-admin.php:189
+msgid "Extra Field Options"
+msgstr ""
+
+#: request-callback-admin.php:190
+msgid ""
+"Options to add additional form fields to the request form and whether to "
+"make them optional or required"
+msgstr ""
+
+#: request-callback-admin.php:194 request-callback-admin.php:321
+msgid "Email"
+msgstr ""
+
+#: request-callback-admin.php:197
+msgctxt "Disabled label"
+msgid "Disabled"
+msgstr ""
+
+#: request-callback-admin.php:198
+msgctxt "Optional label"
+msgid "Optional"
+msgstr ""
+
+#: request-callback-admin.php:199
+msgctxt "Required label"
+msgid "Required"
+msgstr ""
+
+#: request-callback-admin.php:218 request-callback-admin.php:334
+msgid "When to call"
+msgstr ""
+
+#: request-callback-admin.php:239
+msgid "Allow visitors to select between"
+msgstr ""
+
+#: request-callback-admin.php:246
+msgid "and"
+msgstr ""
+
+#: request-callback-admin.php:255 request-callback-admin.php:347
+msgid "Message"
+msgstr ""
+
+#: request-callback-admin.php:276
+msgid "Field Label Options"
+msgstr ""
+
+#: request-callback-admin.php:277
+msgid "Options to customise field labels and palceholders"
+msgstr ""
+
+#: request-callback-admin.php:285
+msgid "Field label"
+msgstr ""
+
+#: request-callback-admin.php:288
+msgid "Field placeholder"
+msgstr ""
+
+#: request-callback-admin.php:295
+msgid "Name"
+msgstr ""
+
+#: request-callback-admin.php:308
+msgid "Telephone"
+msgstr ""
+
+#: request-callback-admin.php:360
+msgid "Submit"
+msgstr ""
+
+#: request-callback-admin.php:371
+msgid "Advanced Options"
+msgstr ""
+
+#: request-callback-admin.php:372
+msgid "Options to enable or disable Colorbox scripts for lightbox display mode"
+msgstr ""
+
+#: request-callback-admin.php:373
+#, php-format
+msgid ""
+"Note: this plugin comes with the %s jQuery plugin to allow the call back "
+"form to open in a lightbox. <br>If you think this plugin is conflicting with "
+"other plugins that use lightboxes, you can control it using these options."
+msgstr ""
+
+#: request-callback-admin.php:377
+msgid "Colorbox"
+msgstr ""
+
+#: request-callback-admin.php:381
+msgid "Enable Colorbox"
+msgstr ""
+
+#: request-callback-admin.php:386
+msgid "Disable Colorbox"
+msgstr ""
+
+#: request-callback-admin.php:386
+msgid "- Only use this if Colorbox is already installed"
+msgstr ""
+
+#: request-callback-admin.php:393
+msgid "Save Changes"
+msgstr ""
+
+#: request-callback-admin.php:396
+#, php-format
+msgid "Request Call Back Plugin by %s"
+msgstr ""
+
+#: request-callback-admin.php:409
+msgid "settings"
+msgstr ""
+
+#: request-callback-admin.php:410
+msgid "Request Call Back Plugin:"
+msgstr ""
+
+#: request-callback-admin.php:410
+#, php-format
+msgid ""
+"Don't forget to create a thank you page for the request call back form and "
+"configure it in the plugin %s."
+msgstr ""
+
+#: request-callback.php:113
+msgid ""
+"Enter your details below to request a call back and we will get back in "
+"touch as soon as possible."
+msgstr ""
+
+#: request-callback.php:202
+msgid "Error sending mail"
+msgstr ""
+
+#: request-callback.php:228
+msgid ""
+"\n"
+"Email address: "
+msgstr ""
+
+#: request-callback.php:241
+msgid "Any time"
+msgstr ""
+
+#: request-callback.php:244
+msgid ""
+"\n"
+"When to call: "
+msgstr ""
+
+#: request-callback.php:248
+msgid ""
+"\n"
+"\n"
+"Message:\n"
+msgstr ""
+
+#: request-callback.php:251
+msgid "Call Back Request"
+msgstr ""
+
+#: request-callback.php:252
+msgid ""
+"A call back request has been sent with the following details:\n"
+"\n"
+"Name: "
+msgstr ""
+
+#: request-callback.php:252
+msgid ""
+"\n"
+"Telephone: "
+msgstr ""
+
+#: request-callback.php:252
+msgid ""
+"\n"
+"\n"
+"\n"
+"Sent from "
+msgstr ""
+
+#: request-callback.php:252
+msgid " via the Request Call Back plugin."
+msgstr ""
+
+#: request-callback.php:260
+msgid ""
+"There was a problem submitting your details, please try again later or "
+"manually write to us at"
+msgstr ""
+
+#: request-callback.php:284
+msgctxt "Plugin settings label"
+msgid "Settings"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Request Call Back"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds a simple, configurable request call back form to WordPress. Visitors can request a call back by providing their name and number via lightbox (or embedded form), which is then sent to the site owner via email."
+msgstr ""
