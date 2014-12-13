@@ -393,7 +393,7 @@ function wpcallback_admin_options() {
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes', 'ssrcb')?>" />
 		</p>
 
-		<p class="wpcallback-footer"><?php printf(__('Request Call Back Plugin by %s', 'ssrcb'), '<a target="_blank" href="http://www.scottsalisbury.co.uk">Scott Salisbury</a>')?></p>
+		<p class="wpcallback-footer"><?php printf(__('Request Call Back Plugin by %s. Multilingual support bu %s.', 'ssrcb'), '<a target="_blank" href="http://www.scottsalisbury.co.uk">Scott Salisbury</a>', '<a target="_blank" href="https://github.com/HomAfromPTZ">Lembinen Nikolay</a>')?></p>
 	</form>
 </div>
 
