@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Request Call Back\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-13 07:43+0400\n"
-"PO-Revision-Date: 2014-12-13 07:45+0400\n"
+"PO-Revision-Date: 2014-12-13 10:04+0400\n"
 "Last-Translator: Лембинен Николай <homawebdev@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -419,7 +419,7 @@ msgstr ""
 
 #: request-callback.php:258
 msgid " via the Request Call Back plugin."
-msgstr "при помощи формы заказа обратного звонка."
+msgstr " при помощи формы заказа обратного звонка."
 
 #: request-callback.php:266
 msgid ""
