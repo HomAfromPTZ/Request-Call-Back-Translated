@@ -400,7 +400,7 @@ msgid "Settings"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Request Call Back"
+msgid "Request Call Back Multilingual"
 msgstr ""
 
 #. Description of the plugin/theme

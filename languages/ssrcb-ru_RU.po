@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Request Call Back\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-13 05:17+0400\n"
-"PO-Revision-Date: 2014-12-13 05:33+0400\n"
+"PO-Revision-Date: 2014-12-13 06:03+0400\n"
 "Last-Translator: Лембинен Николай <homawebdev@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -244,7 +244,7 @@ msgstr "Телефон"
 
 #: request-callback-admin.php:360 request-callback.php:101
 msgid "Submit"
-msgstr "Кнопка отправки"
+msgstr "Заказать звонок"
 
 #: request-callback-admin.php:371
 msgid "Advanced Options"
@@ -299,7 +299,7 @@ msgstr "настроек"
 
 #: request-callback-admin.php:410
 msgid "Request Call Back Plugin:"
-msgstr "Модуль заказа звонка:"
+msgstr "Форма заказа звонка:"
 
 #: request-callback-admin.php:410
 #, php-format
@@ -308,7 +308,7 @@ msgid ""
 "configure it in the plugin %s."
 msgstr ""
 "Не забудьте создать страницу на которую будет отправлен пользователь после "
-"заказа, а также укажите её на странице %s модуля."
+"заказа, а также укажите её на странице %s формы."
 
 #: request-callback.php:31
 msgid "The following information is missing:"
@@ -434,8 +434,8 @@ msgid "Settings"
 msgstr "Настройки"
 
 #. Plugin Name of the plugin/theme
-msgid "Request Call Back"
-msgstr "Заказать звонок"
+msgid "Request Call Back Multilingual"
+msgstr "Форма обратного звонка"
 
 #. Description of the plugin/theme
 msgid ""
@@ -447,3 +447,6 @@ msgstr ""
 "могут запросить обратный звонок указав свое имя и номер телефона в форме "
 "которая будет отправлена владельцу сайта по email. Форма может отображаться "
 "на отдельной странице или при помощи lightbox."
+
+#~ msgid "Request Call Back"
+#~ msgstr "Заказать звонок"
