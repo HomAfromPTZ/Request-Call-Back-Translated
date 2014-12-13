@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Request Call Back\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-13 05:17+0400\n"
-"PO-Revision-Date: 2014-12-13 05:26+0400\n"
+"PO-Revision-Date: 2014-12-13 05:33+0400\n"
 "Last-Translator: Лембинен Николай <homawebdev@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -183,7 +183,7 @@ msgstr ""
 #: request-callback-admin.php:194 request-callback-admin.php:321
 #: request-callback.php:95
 msgid "Email"
-msgstr "Email клиента"
+msgstr "Email"
 
 #: request-callback-admin.php:197
 msgctxt "Disabled label"
