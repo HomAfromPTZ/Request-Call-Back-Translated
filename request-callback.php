@@ -9,7 +9,7 @@
  * Version: 1.5.0
  * License: GPLv3
  * Text Domain: ssrcb
- * Domain Path: languages/
+ * Domain Path: /languages
  */
 
 load_plugin_textdomain( 'ssrcb', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
