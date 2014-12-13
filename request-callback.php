@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Plugin Name: Request Call Back
- * Plugin URI: http://www.scottsalisbury.co.uk/development/wordpress/plugins/request-callback
+ * Plugin Name: Request Call Back Multilingual
+ * Plugin URI: https://github.com/HomAfromPTZ/Request-Call-Back-Multilingual
  * Description: Adds a simple, configurable request call back form to WordPress. Visitors can request a call back by providing their name and number via lightbox (or embedded form), which is then sent to the site owner via email.
- * Author: Scott Salisbury
- * Author URI: http://www.scottsalisbury.co.uk
- * Version: 1.4.1
+ * Author: Lembinen Nikolay
+ * Author URI: https://github.com/HomAfromPTZ
+ * Version: 1.5.0
  * License: GPLv3
  * Text Domain: ssrcb
  * Domain Path: languages/

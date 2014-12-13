@@ -1,7 +1,15 @@
-Request Call Back Translated
-============================
+Request Call Back Multilingual
+==============================
 
 Fork of https://wordpress.org/plugins/request-call-back/ with i18n and multilingual support.
+
+Plugin URI: https://github.com/HomAfromPTZ/Request-Call-Back-Multilingual
+
+Author: Lembinen Nikolay
+
+Author URI: https://github.com/HomAfromPTZ
+
+Version: 1.5.0
 
 Changes:
 

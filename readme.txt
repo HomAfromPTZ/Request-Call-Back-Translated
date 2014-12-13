@@ -1,7 +1,10 @@
-Request-Call-Back-Translated
-============================
-
-Fork of https://wordpress.org/plugins/request-call-back/ with i18n and polylang support.
+Request-Call-Back-Multilingual
+==============================
+Plugin URI: https://github.com/HomAfromPTZ/Request-Call-Back-Multilingual
+Author: Lembinen Nikolay
+Author URI: https://github.com/HomAfromPTZ
+Version: 1.5.0
+Fork of https://wordpress.org/plugins/request-call-back/ with i18n and multilingual support.
 
 Changes:
 1. Few bugfixes
@@ -12,6 +15,10 @@ Changes:
 
 You can find ssrcb.pot in /languages folder and use it as source file for your translation.
 For example: in http://poedit.net/ choose "File -> Create from POT"
+
+-------
+
+Here is the information from original readme.txt:
 
 === Request Call Back ===
 Contributors: scottsalisbury
