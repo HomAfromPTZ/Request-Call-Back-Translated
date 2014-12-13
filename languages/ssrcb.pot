@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 03:35+0400\n"
+"POT-Creation-Date: 2014-12-13 05:17+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,6 +173,7 @@ msgid ""
 msgstr ""
 
 #: request-callback-admin.php:194 request-callback-admin.php:321
+#: request-callback.php:95
 msgid "Email"
 msgstr ""
 
@@ -192,6 +193,7 @@ msgid "Required"
 msgstr ""
 
 #: request-callback-admin.php:218 request-callback-admin.php:334
+#: request-callback.php:97
 msgid "When to call"
 msgstr ""
 
@@ -204,6 +206,7 @@ msgid "and"
 msgstr ""
 
 #: request-callback-admin.php:255 request-callback-admin.php:347
+#: request-callback.php:99
 msgid "Message"
 msgstr ""
 
@@ -223,15 +226,15 @@ msgstr ""
 msgid "Field placeholder"
 msgstr ""
 
-#: request-callback-admin.php:295
+#: request-callback-admin.php:295 request-callback.php:91
 msgid "Name"
 msgstr ""
 
-#: request-callback-admin.php:308
+#: request-callback-admin.php:308 request-callback.php:93
 msgid "Telephone"
 msgstr ""
 
-#: request-callback-admin.php:360
+#: request-callback-admin.php:360 request-callback.php:101
 msgid "Submit"
 msgstr ""
 
@@ -297,6 +300,30 @@ msgstr ""
 
 #: request-callback.php:32
 msgid "Please wait..."
+msgstr ""
+
+#: request-callback.php:80
+msgid "Request a call back"
+msgstr ""
+
+#: request-callback.php:92
+msgid "Your name"
+msgstr ""
+
+#: request-callback.php:94
+msgid "Your telephone number"
+msgstr ""
+
+#: request-callback.php:96
+msgid "Your email"
+msgstr ""
+
+#: request-callback.php:98
+msgid "Anytime"
+msgstr ""
+
+#: request-callback.php:100
+msgid "Your message"
 msgstr ""
 
 #: request-callback.php:119

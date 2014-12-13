@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Request Call Back\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 03:35+0400\n"
-"PO-Revision-Date: 2014-12-13 03:48+0400\n"
+"POT-Creation-Date: 2014-12-13 05:17+0400\n"
+"PO-Revision-Date: 2014-12-13 05:26+0400\n"
 "Last-Translator: Лембинен Николай <homawebdev@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -85,7 +85,7 @@ msgstr "Альтернативный CSS"
 
 #: request-callback-admin.php:95
 msgid "Add your own CSS styling to the button to suit your needs"
-msgstr "Вставте собственный CSS код"
+msgstr "Вставьте собственный CSS код"
 
 #: request-callback-admin.php:99
 msgid "Custom CSS classes"
@@ -181,6 +181,7 @@ msgstr ""
 "обязательность их заполнения"
 
 #: request-callback-admin.php:194 request-callback-admin.php:321
+#: request-callback.php:95
 msgid "Email"
 msgstr "Email клиента"
 
@@ -200,6 +201,7 @@ msgid "Required"
 msgstr "Обязательное"
 
 #: request-callback-admin.php:218 request-callback-admin.php:334
+#: request-callback.php:97
 msgid "When to call"
 msgstr "Когда звонить"
 
@@ -212,6 +214,7 @@ msgid "and"
 msgstr "и"
 
 #: request-callback-admin.php:255 request-callback-admin.php:347
+#: request-callback.php:99
 msgid "Message"
 msgstr "Сообщение"
 
@@ -231,15 +234,15 @@ msgstr "Заголовок"
 msgid "Field placeholder"
 msgstr "Подсказка"
 
-#: request-callback-admin.php:295
+#: request-callback-admin.php:295 request-callback.php:91
 msgid "Name"
 msgstr "Имя"
 
-#: request-callback-admin.php:308
+#: request-callback-admin.php:308 request-callback.php:93
 msgid "Telephone"
 msgstr "Телефон"
 
-#: request-callback-admin.php:360
+#: request-callback-admin.php:360 request-callback.php:101
 msgid "Submit"
 msgstr "Кнопка отправки"
 
@@ -304,8 +307,8 @@ msgid ""
 "Don't forget to create a thank you page for the request call back form and "
 "configure it in the plugin %s."
 msgstr ""
-"Не забудьте создать страницу для отображения формы заказа обратного звонка, "
-"а затем указать её на странице %s модуля."
+"Не забудьте создать страницу на которую будет отправлен пользователь после "
+"заказа, а также укажите её на странице %s модуля."
 
 #: request-callback.php:31
 msgid "The following information is missing:"
@@ -314,6 +317,30 @@ msgstr "Заполните следующие поля:"
 #: request-callback.php:32
 msgid "Please wait..."
 msgstr "Подождите..."
+
+#: request-callback.php:80
+msgid "Request a call back"
+msgstr "Заказать звонок"
+
+#: request-callback.php:92
+msgid "Your name"
+msgstr "Имя"
+
+#: request-callback.php:94
+msgid "Your telephone number"
+msgstr "Телефон"
+
+#: request-callback.php:96
+msgid "Your email"
+msgstr "Ваш Email"
+
+#: request-callback.php:98
+msgid "Anytime"
+msgstr "В любое время"
+
+#: request-callback.php:100
+msgid "Your message"
+msgstr "Сообщение"
 
 #: request-callback.php:119
 msgid ""

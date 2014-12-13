@@ -77,7 +77,7 @@ function wpcallback_get_option($option) {
 	global $wpcallback_plugin_option;
 
 	$wpcallback_plugin_default_option = array(
-		"label" => "Request a call back",
+		"label" => __("Request a call back", 'ssrcb'),
 		"custom_css" => "a.callback-btn-style {\n\n}",
 		"email" => get_bloginfo('admin_email'),
 		"colorbox" => "enabled",
@@ -88,17 +88,17 @@ function wpcallback_get_option($option) {
 		"field_email" => "disabled",
 		"field_time" => "disabled",
 		"field_message" => "disabled",
-		"field_option_label_name" => "Name",
-		"field_option_placeholder_name" => "Your name",
-		"field_option_label_telephone" => "Telephone",
-		"field_option_placeholder_telephone" => "Your telephone number",
-		"field_option_label_email" => "Email",
-		"field_option_placeholder_email" => "Your email",
-		"field_option_label_time" => "When to call",
-		"field_option_placeholder_time" => "Anytime",
-		"field_option_label_message" => "Message",
-		"field_option_placeholder_message" => "Your message",
-		"field_option_label_submit" => "Submit",
+		"field_option_label_name" => __("Name", 'ssrcb'),
+		"field_option_placeholder_name" => __("Your name", 'ssrcb'),
+		"field_option_label_telephone" => __("Telephone", 'ssrcb'),
+		"field_option_placeholder_telephone" => __("Your telephone number", 'ssrcb'),
+		"field_option_label_email" => __("Email", 'ssrcb'),
+		"field_option_placeholder_email" => __("Your email", 'ssrcb'),
+		"field_option_label_time" => __("When to call", 'ssrcb'),
+		"field_option_placeholder_time" => __("Anytime", 'ssrcb'),
+		"field_option_label_message" => __("Message", 'ssrcb'),
+		"field_option_placeholder_message" => __("Your message", 'ssrcb'),
+		"field_option_label_submit" => __("Submit", 'ssrcb'),
 		"width" => "400px"
 	);
 
